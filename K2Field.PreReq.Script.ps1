@@ -50,7 +50,7 @@ Add-WindowsFeature Web-Security
 Add-WindowsFeature Web-Filtering
 Add-WindowsFeature Web-Basic-Auth
 Add-WindowsFeature Web-Client-Auth
-Add-WindowsFeature Add-WindowsFeature Web-Digest-Auth
+Add-WindowsFeature Web-Digest-Auth
 Add-WindowsFeature Web-Cert-Auth
 Add-WindowsFeature Web-IP-Security
 Add-WindowsFeature Web-Url-Auth
