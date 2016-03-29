@@ -1,4 +1,4 @@
-# Script:	K2Field.PreReq.Script.ps1
+    # Script:	K2Field.PreReq.Script.ps1
 # Author: 	Tim Huttemeister, K2
 # Website: 	http://www.timhuttemeister.com
 # Purpose: 	Install & configure the basic K2 prerequisites properly
@@ -77,7 +77,7 @@ Function InstallAndConfigurePrereqs {
     Add-WindowsFeature AS-Named-Pipes
     Add-WindowsFeature AS-TCP-Activation
 
-    Write-Host "Web Server (IIS) features (4/13)" -ForegroundColor Yellow
+    Write-Host "Web Server (IIS) Features (4/13)" -ForegroundColor Yellow
     Add-WindowsFeature Web-Server
     Add-WindowsFeature Web-WebServer
 
