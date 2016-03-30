@@ -17,8 +17,9 @@ NET-Framework-Features |
 NET-NET-HTTP-Activation |
 NET-Framework-45-Features |
 
-##### Application Server Features ##### 
+##### Application Server Features #####
 Role/Feature |
+---------|
 AS-NET-Framework |
 AS-Dist-Transaction |
 AS-Incoming-Trans |
@@ -28,12 +29,13 @@ AS-MSMQ-Activation |
 AS-Named-Pipes |
 AS-TCP-Activation |
 
-##### Web Server (IIS) Features ##### 
+##### Web Server (IIS) Features #####
 Role/Feature |
+---------|
 Web-Server |
 Web-WebServer |
 
-##### Common HTTP Features ##### 
+##### Common HTTP Features #####
 Role/Feature |
 ---------|
 Web-Common-Http |
@@ -43,7 +45,7 @@ Web-Http-Errors |
 Web-Static-Content |
 Web-Http-Redirect |
 
-##### Health and Diagnostics ##### 
+##### Health and Diagnostics #####
 Role/Feature |
 ---------|
 Web-Health |
@@ -112,8 +114,7 @@ Role/Feature |
 Windows-Identity-Foundation |
 
 ### Disclaimer ###
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND**
-**THIS CODE IS NOT OFFICIALLY FROM K2 AND THEREFORE NOT SUPPORTED BY K2**
+**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND. IT'S NOT AN OFFICIALL REPOSITORY FROM K2 AND THEREFORE NOT SUPPORTED BY K2.**
 
 ----------
 
@@ -123,4 +124,4 @@ Windows-Identity-Foundation |
 3. Navigate to the script folder and run the script
 
 # Contributing #
-If you want to contribute to this K2Field.PreReq project, simply clone the repository and send a pull request with your changes.
+If you want to contribute to this	 project, simply clone the repository and send a pull request with your changes.
