@@ -6,7 +6,7 @@ PowerShell script to install & configure basic prerequisites for K2 (Windows rol
 ### Applies to ###
 - Windows Server 2012
 - Windows Server 2012 R2
-- Windows Server 2014
+- Windows Server 2016 TP4
 
 ### Windows Roles & Features Installed ###
 ##### .NET Framework 3.5 Features #####
