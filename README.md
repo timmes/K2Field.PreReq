@@ -3,6 +3,8 @@
 ### Summary ###
 PowerShell script to install & configure basic prerequisites for K2 (Windows roles &amp; features).
 
+![alt tag](http://timhuettemeister.com/wp-content/uploads/2015/09/2016_04_03_10_34_22_Administrator_Windows_PowerShell.jpg "K2Field.PreReq")
+
 ### Applies to ###
 - Windows Server 2012
 - Windows Server 2012 R2
