@@ -10,6 +10,11 @@ PowerShell script to install & configure basic prerequisites for K2 (Windows rol
 - Windows Server 2012 R2
 - Windows Server 2014
 
+### INSTALLATION ###
+1. Download the "K2Field.PreReq.Script.ps1" PowerShell file
+2. Open the PowerShell console in Admin Mode
+3. Navigate to the script folder and run the script
+
 ### Windows Roles & Features Installed ###
 ##### .NET Framework 3.5 Features #####
 Role/Feature |
@@ -115,20 +120,14 @@ Role/Feature |
 ---------|
 Windows-Identity-Foundation |
 
-### Disclaimer ###
+
+----------
+
+## Disclaimer ##
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND. IT'S NOT AN OFFICIALL REPOSITORY FROM K2 AND THEREFORE NOT SUPPORTED BY K2.**
 
-----------
+## Contributing ##
+If you want to contribute to this project, simply clone the repository and send a pull request with your changes.
 
-# INSTALLATION #
-1. Download the "K2Field.PreReq.Script.ps1" PowerShell file
-2. Open the PowerShell console in Admin Mode
-3. Navigate to the script folder and run the script
-
-# Contributing #
-If you want to contribute to this	 project, simply clone the repository and send a pull request with your changes.
-
-----------
-
-# License #
+## License ##
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).

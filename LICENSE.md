@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2015-2015 Tim Huttemeister
+Copyright (c) 2015-2016 Tim Huttemeister
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
