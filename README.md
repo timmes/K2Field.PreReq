@@ -130,6 +130,5 @@ Windows-Identity-Foundation |
 ## Contributing ##
 If you want to contribute to this project, simply clone the repository and send a pull request with your changes.
 
-<<<<<<< HEAD
 ## License ##
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
