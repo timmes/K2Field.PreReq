@@ -8,7 +8,7 @@ PowerShell script to install & configure basic prerequisites for K2 (Windows rol
 ### Applies to ###
 - Windows Server 2012
 - Windows Server 2012 R2
-- Windows Server 2014
+- Windows Server 2016 TP4
 
 ### Installation ###
 1. Download the "K2Field.PreReq.Script.ps1" PowerShell file

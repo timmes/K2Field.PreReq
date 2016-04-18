@@ -1,4 +1,4 @@
-    # Script:	K2Field.PreReq.Script.ps1
+# Script:	K2Field.PreReq.Script.ps1
 # Author: 	Tim Huttemeister, K2
 # Website: 	http://www.timhuttemeister.com
 # Purpose: 	Install & configure the basic K2 prerequisites properly
@@ -67,6 +67,14 @@ Function InstallAndConfigurePrereqs {
     Write-Host ".NET Framework 4.5 Features (2/13)" -ForegroundColor Yellow
     Add-WindowsFeature NET-Framework-45-Features
 
+    #Application Server role has been deprecated in Server 2012 R2
+    #Block below will be executed only on versions older than 2012 R2 (6.3)
+    $ver_major=[System.Environment]::OSVersion.Version.Major
+    $ver_minor=[System.Environment]::OSVersion.Version.Minor
+    ##Write-Host $ver_major
+    ##Write-Host $ver_minor
+    If ($ver_major -lt 6 -and $ver_minor -lt 3) {
+    ##Write-Host "OS is lower than server 2012R2"
     Write-Host "Application Server Features (3/13)" -ForegroundColor Yellow
     Add-WindowsFeature AS-NET-Framework
     Add-WindowsFeature AS-Dist-Transaction
@@ -76,6 +84,8 @@ Function InstallAndConfigurePrereqs {
     Add-WindowsFeature AS-MSMQ-Activation
     Add-WindowsFeature AS-Named-Pipes
     Add-WindowsFeature AS-TCP-Activation
+    }
+    Else {Write-Host "Application Server Features (3/13) step skipped as you running Server 2012 R2 or newer" -ForegroundColor Yellow}
 
     Write-Host "Web Server (IIS) Features (4/13)" -ForegroundColor Yellow
     Add-WindowsFeature Web-Server
