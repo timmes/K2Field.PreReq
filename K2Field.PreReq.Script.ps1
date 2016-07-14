@@ -1,9 +1,10 @@
 # Script:	K2Field.PreReq.Script.ps1
 # Author: 	Tim Huttemeister, K2
 # Website: 	http://www.timhuttemeister.com
-# Purpose: 	Install & configure the basic K2 prerequisites properly
-# Version:  1.2
-# Date:     2016-03-29
+# Purpose: 	Check if all K2 prerequisites are installed & install and configure the basic K2 prerequisites properly.
+# Version:  1.4
+# Date:     2016-07-14
+# Changes:  New function for checking which features are (not) installed.
 #
 
 #
@@ -16,17 +17,17 @@ Import-Module ServerManager
 #
 Function Intro {
 $logo = @"                       
-  ++++  ++++             
-  ++++  ++++             
-  ++++  ++++             
-  ++++                  
-                     
-  ++++ ++++  +; +'  ;+++,, 
-  ++++ ++++  +;+'   ;  ;+  
-  ++++ ++++  +++      +.  
-  ++++ ++++  +;+'    +,   
-             +; +;  +',,  
-             +;  + :+++++
+++++  ++++             
+++++  ++++             
+++++  ++++             
+++++                  
+                    
+++++ ++++  +; +'  ;+++,, 
+++++ ++++  +;+'   ;  ;+  
+++++ ++++  +++      +.  
+++++ ++++  +;+'    +,   
+           +; +;  +',,  
+           +;  + :+++++
 "@
 
 Write-Host $logo -ForegroundColor DarkGreen
@@ -42,21 +43,45 @@ Function Confirmation {
 
     $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Runs the script."
     $no = New-Object System.Management.Automation.Host.ChoiceDescription "&No", "Stops the script."
+    $checkPrereqisites = New-Object System.Management.Automation.Host.ChoiceDescription "&CheckFeatures", "Checks if all K2 prerequisites are installed."
 
-    $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
+    $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no, $checkPrereqisites)
     $result = $host.ui.PromptForChoice($title, $message, $options, 0) 
 
     switch ($result)
     {
         0{ InstallAndConfigurePrereqs }
         1{ Write-Host "You manually aborted the script. No changes will be made." -ForegroundColor Yellow }
+        2{ CheckPrerequisites }
+    }
+}
+
+#
+# Check all prerequisites
+#
+Function CheckPrerequisites {
+    $csv = @()
+    $csv = Import-Csv -Path $newPath
+    
+    ForEach ($item In $csv)
+    {
+        $windowsFeature=Get-WindowsFeature | Where-Object {$_.Name -eq $item.FeatureName}
+        If($windowsFeature.Installed -ne "True")
+        {
+            Write-Host "Feature $($item.FeatureName) IS NOT installed." -ForegroundColor Red
+        }
+        Else
+        {
+            Write-Host "Feature $($item.FeatureName) is installed." -ForegroundColor Green
+        }
     }
 }
 
 #
 # Installation & configuration of the Windows roles & features
 #
-Function InstallAndConfigurePrereqs {
+Function InstallAndConfigurePrereqs 
+{
     Write-Host "Installing & configuring Windows roles & features. This can take some minutes..." -ForegroundColor Yellow
 
     Write-Host ".NET Framework 3.5 Features (1/13)" -ForegroundColor Yellow
@@ -178,9 +203,11 @@ Function InstallAndConfigurePrereqs {
     Write-Host "Basic K2 prerequisite installation & configuration finished. Please check manually to confirm the changes." -ForegroundColor Green
 }
 
-#
 # Script execution starts here
-#
 Intro
+
+# Get CSV file path for later use
+$path = Split-Path -parent $MyInvocation.MyCommand.Definition 
+$newPath = $path + "\prerequisites.csv"
 
 Confirmation
