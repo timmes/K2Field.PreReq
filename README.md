@@ -19,7 +19,7 @@ PowerShell script to install & configure basic prerequisites for K2 (Windows rol
 
 ### Windows Roles & Features Installed ###
 Role/Feature | Category
----------|
+---------|---------
 NET-Framework-Core | .NET Framework 3.5 Features
 NET-Framework-Features | .NET Framework 3.5 Features
 NET-NET-HTTP-Activation | .NET Framework 3.5 Features
