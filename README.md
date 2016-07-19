@@ -14,6 +14,7 @@ PowerShell script to install & configure basic prerequisites for K2 (Windows rol
 1. Download the "K2Field.PreReq.Script.ps1" PowerShell file
 2. Open the PowerShell console in Admin Mode
 3. Navigate to the script folder and run the script
+4. Follow the instructions in the console
 
 ----------
 
