@@ -18,109 +18,64 @@ PowerShell script to install & configure basic prerequisites for K2 (Windows rol
 ----------
 
 ### Windows Roles & Features Installed ###
-##### .NET Framework 3.5 Features #####
-Role/Feature |
+Role/Feature | Category
 ---------|
-NET-Framework-Core |
-NET-Framework-Features |
-NET-NET-HTTP-Activation |
-NET-Framework-45-Features |
-
-##### Application Server Features #####
-Role/Feature |
----------|
-AS-NET-Framework |
-AS-Dist-Transaction |
-AS-Incoming-Trans |
-AS-Outgoing-Trans |
-AS-HTTP-Activation |
-AS-MSMQ-Activation |
-AS-Named-Pipes |
-AS-TCP-Activation |
-
-##### Web Server (IIS) Features #####
-Role/Feature |
----------|
-Web-Server |
-Web-WebServer |
-
-##### Common HTTP Features #####
-Role/Feature |
----------|
-Web-Common-Http |
-Web-Default-Doc |
-Web-Dir-Browsing |
-Web-Http-Errors |
-Web-Static-Content |
-Web-Http-Redirect |
-
-##### Health and Diagnostics #####
-Role/Feature |
----------|
-Web-Health |
-Web-Http-Logging |
-Web-Log-Libraries |
-Web-Request-Monitor |
-Web-Http-Tracing |
-
-##### Performance #####
-Role/Feature |
----------|
-Web-Performance |
-Web-Stat-Compression |
-Web-Dyn-Compression |
-
-##### Security #####
-Role/Feature |
----------|
-Web-Security |
-Web-Filtering |
-Web-Basic-Auth |
-Web-Client-Auth |
-Web-Digest-Auth |
-Web-Cert-Auth |
-Web-IP-Security |
-Web-Url-Auth |
-Web-Windows-Auth |
-
-##### Application Development #####
-Role/Feature |
----------|
-Web-App-Dev |
-Web-Net-Ext |
-Web-Net-Ext45 |
-Web-AppInit |
-Web-ASP |
-Web-Asp-Net |
-Web-ASP-Net45 |
-Web-ISAPI-Ext |
-Web-ISAPI-Filter |
-
-##### Management Tools #####
-Role/Feature |
----------|
-Web-Mgmt-Tools |
-Web-Mgmt-Console |
-Web-Mgmt-Compat |
-Web-Scripting-Tools |
-Web-Mgmt-Service |
-
-##### Message Queuing #####
-Role/Feature |
----------|
-MSMQ |
-MSMQ-Services |
-MSMQ-Directory |
-
-##### Telnet #####
-Role/Feature |
----------|
-Telnet-Client |
-
-##### Windows Identity Foundation 3.5 #####
-Role/Feature |
----------|
-Windows-Identity-Foundation |
+NET-Framework-Core | .NET Framework 3.5 Features
+NET-Framework-Features | .NET Framework 3.5 Features
+NET-NET-HTTP-Activation | .NET Framework 3.5 Features
+NET-Framework-45-Features | .NET Framework 3.5 Features
+AS-NET-Framework | Application Server Features
+AS-Dist-Transaction | Application Server Features
+AS-Incoming-Trans | Application Server Features
+AS-Outgoing-Trans | Application Server Features
+AS-HTTP-Activation | Application Server Features
+AS-MSMQ-Activation | Application Server Features
+AS-Named-Pipes | Application Server Features
+AS-TCP-Activation | Application Server Features
+Web-Server | Web Server (IIS) Features
+Web-WebServer | Web Server (IIS) Features
+Web-Common-Http | Common HTTP Features
+Web-Default-Doc | Common HTTP Features
+Web-Dir-Browsing | Common HTTP Features
+Web-Http-Errors | Common HTTP Features
+Web-Static-Content | Common HTTP Features
+Web-Http-Redirect | Common HTTP Features
+Web-Health | Health and Diagnostics
+Web-Http-Logging | Health and Diagnostics
+Web-Log-Libraries | Health and Diagnostics
+Web-Request-Monitor | Health and Diagnostics
+Web-Http-Tracing | Health and Diagnostics
+Web-Performance | Performance
+Web-Stat-Compression | Performance
+Web-Dyn-Compression | Performance
+Web-Security | Security
+Web-Filtering | Security
+Web-Basic-Auth | Security
+Web-Client-Auth | Security
+Web-Digest-Auth | Security
+Web-Cert-Auth | Security
+Web-IP-Security | Security
+Web-Url-Auth | Security
+Web-Windows-Auth | Security
+Web-App-Dev | Application Development
+Web-Net-Ext | Application Development
+Web-Net-Ext45 | Application Development
+Web-AppInit | Application Development
+Web-ASP | Application Development
+Web-Asp-Net | Application Development
+Web-ASP-Net45 | Application Development
+Web-ISAPI-Ext | Application Development
+Web-ISAPI-Filter | Application Development
+Web-Mgmt-Tools | Management Tools
+Web-Mgmt-Console | Management Tools
+Web-Mgmt-Compat | Management  Tools
+Web-Scripting-Tools | Management Tools
+Web-Mgmt-Service | Management Tools
+MSMQ | Message Queuing
+MSMQ-Services | Message Queuing
+MSMQ-Directory | Message Queuing
+Telnet-Client | Telnet
+Windows-Identity-Foundation | Windows Identity Foundation 3.5
 
 ----------
 

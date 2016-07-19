@@ -2,9 +2,9 @@
 # Author: 	Tim Huttemeister, K2
 # Website: 	http://www.timhuttemeister.com
 # Purpose: 	Check if all K2 prerequisites are installed & install and configure the basic K2 prerequisites properly.
-# Version:  1.5
-# Date:     2016-07-14
-# Changes:  New function for checking which features are (not) installed.
+# Version:  1.6
+# Date:     2016-07-19
+# Changes:  Fixed major bug where array for missing features wasn't correctly initialized.
 #
 
 #
@@ -66,7 +66,7 @@ Function CheckPrerequisites {
         If($windowsFeature.Installed -ne "True")
         {
             Write-Host "Feature $($item.FeatureName) IS NOT installed." -ForegroundColor Red
-            $missingFeaturesList += $item.FeatureName
+            $missingFeaturesList.Add($item.FeatureName)
         }
         Else
         {
@@ -105,7 +105,7 @@ Function InstallAndConfigurePrereqs([bool]$installMissing = $false)
         ForEach ($item In $csv)
         {
             # Output feature category
-            IF($item.FeatureCategory -ne $lastFeatureCategory)
+            IF ($item.FeatureCategory -ne $lastFeatureCategory)
             {
                 Write-Host "Feature category: $($item.FeatureCategory)" -ForegroundColor Yellow
                 $lastFeatureCategory = $item.FeatureCategory
@@ -131,8 +131,8 @@ $path                   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $newPath                = $path + "\prerequisites.csv"
 $csv                    = @()
 $csv                    = Import-Csv -Path $newPath
-# Initiate the hash table for our missing features list
-$missingFeaturesList    = @()
+# Initiate the array for our missing features list
+[System.Collections.ArrayList]$missingFeaturesList    = @()
 
 # Show intro screen and get user input
 Intro
